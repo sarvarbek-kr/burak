@@ -4,6 +4,7 @@
   "description": "this is burak projeet backend",
   "main": "src/server.ts",
   "scripts": {
+    "train": "nodemon train.js",
     "start": "ts-node src/server.ts",
     "start:dev": "nodemon --exec ts-node src/server.ts",
     "build": "tsc",

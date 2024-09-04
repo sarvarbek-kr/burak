@@ -1,9 +1,5 @@
-console.log("EXECUTED");
+// Architectural pattern: MVC, Dependency Injection, MVP    == backend odamni hamma suyagi
 
-import moment from "moment";
+// MVC = Model view controller = asosan backend da ishlatiladi.
 
-const currentTime = moment().format("YYYY MM DD");
-console.log(currentTime);
-
-const person: string = "Martin";
-const count:number = 100;
+// Design pattern: Middleware, Decotar    == malum bir suyak (qo'l masalan)
