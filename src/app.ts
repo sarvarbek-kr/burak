@@ -1,6 +1,7 @@
 import express from 'express';
 import path from "path";
 import router from './router'; 
+import routerAdmin from './routerAdmin';
 
 // 1- ENTRANCE
 
@@ -17,6 +18,7 @@ app.set("views", path.join (__dirname, "views"));
 app.set("views engine", "ejs");
 
 // 4- ROUTERS
-app.use("/", router);          // Middleware Design pattern
+app.use("/admin", routerAdmin); // SSR: EJS (backenda frontentimzi qurishga)
+app.use("/", router);  // SPA : REACT (frontend)        // Middleware Design pattern
 
 export default app;   // module.exports bilan bir xil
