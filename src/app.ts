@@ -1,5 +1,6 @@
 import express from 'express';
 import path from "path";
+import router from './router'; 
 
 // 1- ENTRANCE
 
@@ -16,6 +17,6 @@ app.set("views", path.join (__dirname, "views"));
 app.set("views engine", "ejs");
 
 // 4- ROUTERS
-
+app.use("/", router);          // Middleware Design pattern
 
 export default app;   // module.exports bilan bir xil
