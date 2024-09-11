@@ -15,8 +15,23 @@
 // MASALAN: getDigits("m14i1t") return qiladi "141".
 
 
-function getDigits(str: string): string {
-    return str.replace(/\D/g, ''); // \D - digit bo'lmagan belgilarni o'chiradi
-}
+// function getDigits(str: string): string {
+//     return str.replace(/\D/g, ''); // \D - digit bo'lmagan belgilarni o'chiradi
+// }
 
-console.log(getDigits("m14i1t")); // Output: "141"
+// console.log(getDigits("m14i1t")); // Output: "141"
+
+
+
+
+/* 
+-- Project Standarts.
+
+-- Naming Standarts:
+     function, method , variable  == Camel
+     class                        => PASCAL
+     folder                       => KEBAB
+     css                          => SNAKE
+
+-- ERRor handling
+*/
