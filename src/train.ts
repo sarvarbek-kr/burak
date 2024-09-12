@@ -35,3 +35,11 @@
 
 -- ERRor handling
 */
+
+
+/* 
+    Traditional API
+    Rest API
+    GRAPHQL API
+    ....
+*/
