@@ -86,23 +86,28 @@
 // Shunday function yozing, u string qabul qilsin va string ichidagi eng uzun sozni qaytarsin.
 // MASALAN: findLongestWord("I come from Uzbekistan") return "Uzbekistan".
 
-function findLongestWord(sentence: string): string {
-    // So'zlarni ajratish uchun bo'sh joy asosida bo'lib olamiz
-    const words = sentence.split(' ');
+// function findLongestWord(sentence: string): string {
+//     // So'zlarni ajratish uchun bo'sh joy asosida bo'lib olamiz
+//     const words = sentence.split(' ');
 
-    // Eng uzun so'zni topish uchun
-    let longestWord = '';
+//     // Eng uzun so'zni topish uchun
+//     let longestWord = '';
 
-    for (let word of words) {
-        // Agar hozirgi so'z oldingi eng uzun so'zdan uzunroq bo'lsa, uni yangilaymiz
-        if (word.length > longestWord.length) {
-            longestWord = word;
-        }
-    }
+//     for (let word of words) {
+//         // Agar hozirgi so'z oldingi eng uzun so'zdan uzunroq bo'lsa, uni yangilaymiz
+//         if (word.length > longestWord.length) {
+//             longestWord = word;
+//         }
+//     }
 
-    return longestWord;
-}
+//     return longestWord;
+// }
 
-// Misol
-console.log(findLongestWord("I come from Surkhandarya")); // "Surkhandarya"
+// // Misol
+// console.log(findLongestWord("I come from Surkhandarya")); // "Surkhandarya"
 
+
+         //      COOKIE
+
+         // request join
+         // Self destroy
