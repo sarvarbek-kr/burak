@@ -143,3 +143,20 @@ REQUESTLAR :
         Backend validation
         Database validation
         */
+
+
+
+//         L-TASK: 
+
+// Shunday function yozing, u string qabul qilsin va string ichidagi hamma sozlarni chappasiga yozib va sozlar ketma-ketligini buzmasdan stringni qaytarsin.
+// MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
+
+
+function reverseSentence(sentence: string): string {
+    return sentence
+        .split(' ')                // So'zlarni ajratib arrayga o'girish
+        .map(word => word.split('').reverse().join('')) // Har bir so'zni chappaga o'girish
+        .join(' ');               // Arrayni qaytadan stringga aylantirish
+}
+
+console.log(reverseSentence("we like coding!")); // "ew ekil gnidoc!"
