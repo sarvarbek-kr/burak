@@ -38,6 +38,7 @@
 
 
 /* 
+REQUESTLAR :
     Traditional API
     Rest API
     GRAPHQL API
@@ -116,23 +117,29 @@
         //  Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
         //  MASALAN: countVowels("string") return 1;
    
-         function countVowels(str: string): number {
-            // Unli harflar to'plami
-            const vowels: string[] = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-            let count: number = 0;
+        //  function countVowels(str: string): number {
+        //     // Unli harflar to'plami
+        //     const vowels: string[] = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        //     let count: number = 0;
         
-            // Har bir belgi bo'yicha tekshiruv
-            for (let char of str) {
-                if (vowels.includes(char)) {
-                    count++;
-                }
-            }
+        //     // Har bir belgi bo'yicha tekshiruv
+        //     for (let char of str) {
+        //         if (vowels.includes(char)) {
+        //             count++;
+        //         }
+        //     }
         
-            return count;
-        }
+        //     return count;
+        // }
         
-        // Test
-        console.log(countVowels("Korea")); // 3 ta
-        console.log(countVowels("my name is Sarvarbek")); // 6 ta
-        console.log(countVowels("TypeScriptda Tuzdik")); // 5 ta
+        // // Test
+        // console.log(countVowels("Korea")); // 3 ta
+        // console.log(countVowels("my name is Sarvarbek")); // 6 ta
+        // console.log(countVowels("TypeScriptda Tuzdik")); // 5 ta
         
+
+        /* Validation:
+        Frontend validation
+        Backend validation
+        Database validation
+        */
