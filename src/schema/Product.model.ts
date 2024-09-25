@@ -20,7 +20,7 @@ const productSchema = new Schema(
             type: String,
             required: true,
         },
-        productPrize: {
+        productPrice: {
             type: Number,
             required: true,
         },
@@ -37,14 +37,13 @@ const productSchema = new Schema(
         },
 
         productvolume: {
-            type: String,
+            type: Number,
             enum: Productvolume,
             default: Productvolume.ONE,
         },
         
         productDesc: {
             type: String,
-            required: true,
         },
 
         productImages: {
