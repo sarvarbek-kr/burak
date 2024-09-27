@@ -171,13 +171,35 @@ REQUESTLAR :
 
 
 
-function getSquareNumbers(numbers: number[]): { number: number, square: number }[] {
-    return numbers.map(num => ({
-        number: num,
-        square: num * num
-    }));
+// function getSquareNumbers(numbers: number[]): { number: number, square: number }[] {
+//     return numbers.map(num => ({
+//         number: num,
+//         square: num * num
+//     }));
+// }
+
+// // Masalan
+// const result = getSquareNumbers([1, 2, 3]);
+// console.log(result); 
+
+
+// N-TASK: 
+
+// Shunday function yozing, u string qabul qilsin va string palindrom yani togri oqilganda ham, orqasidan oqilganda ham bir hil oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
+// MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
+
+function palindromCheck(str: string): boolean {
+    // Kirilgan stringni pastki harflarga o'girish va bo'shliqlarni olib tashlash
+    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    
+    // Stringni teskari qilib o'qish
+    const reversedStr = cleanedStr.split('').reverse().join('');
+    
+    // Asl string va teskari o'qilgan stringni taqqoslash
+    return cleanedStr === reversedStr;
 }
 
-// Masalan
-const result = getSquareNumbers([1, 2, 3]);
-console.log(result); 
+// Misollar:
+console.log(palindromCheck("dad")); // true
+console.log(palindromCheck("son")); // false
+console.log(palindromCheck("A man a plan a canal Panama")); // true
