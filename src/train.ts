@@ -188,18 +188,37 @@ REQUESTLAR :
 // Shunday function yozing, u string qabul qilsin va string palindrom yani togri oqilganda ham, orqasidan oqilganda ham bir hil oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
 // MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
 
-function palindromCheck(str: string): boolean {
-    // Kirilgan stringni pastki harflarga o'girish va bo'shliqlarni olib tashlash
-    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+// function palindromCheck(str: string): boolean {
+//     // Kirilgan stringni pastki harflarga o'girish va bo'shliqlarni olib tashlash
+//     const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
     
-    // Stringni teskari qilib o'qish
-    const reversedStr = cleanedStr.split('').reverse().join('');
+//     // Stringni teskari qilib o'qish
+//     const reversedStr = cleanedStr.split('').reverse().join('');
     
-    // Asl string va teskari o'qilgan stringni taqqoslash
-    return cleanedStr === reversedStr;
+//     // Asl string va teskari o'qilgan stringni taqqoslash
+//     return cleanedStr === reversedStr;
+// }
+
+// // Misollar:
+// console.log(palindromCheck("dad")); // true
+// console.log(palindromCheck("son")); // false
+// console.log(palindromCheck("A man a plan a canal Panama")); // true
+
+// O-TASK:
+
+// Shunday function yozing, u har xil valuelardan iborat array qabul qilsin va array ichidagi sonlar yigindisini hisoblab chiqqan javobni qaytarsin.
+// MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
+
+function calculateSumOfNumbers(arr: any[]): number {
+    return arr.reduce((sum, item) => {
+        if (typeof item === 'number') {
+            return sum + item;
+        }
+        return sum;
+    }, 0);
 }
 
-// Misollar:
-console.log(palindromCheck("dad")); // true
-console.log(palindromCheck("son")); // false
-console.log(palindromCheck("A man a plan a canal Panama")); // true
+// Misol uchun:
+const result = calculateSumOfNumbers([10, "10", {son: 10}, true, 35]);
+console.log(result); // Natija: 45
+
