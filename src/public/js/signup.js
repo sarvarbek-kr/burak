@@ -5,9 +5,9 @@ $(function () {
 
     fileTarget.on("change", function () {
         if(window.FileReader) {
-            const uploadFile = $(this)[0].files[0];
-            const fileType = uploadFile["type"];
-            const validImageType = ["image/jpg", "image/jpeg", "image/png"];
+            const uploadFile = $(this)[0].files[0],
+            fileType = uploadFile["type"],
+            validImageType = ["image/jpg", "image/jpeg", "image/png"];
 
             if (!validImageType.includes(fileType)) {
                 alert('Please insert only jpg, jpeg, png!');
