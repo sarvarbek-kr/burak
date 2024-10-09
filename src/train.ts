@@ -258,8 +258,25 @@ REQUESTLAR :
 // MASALAN: calculate("1+3") return 4;
 
 
-function calculate(expression: string): number {
-    return eval(expression);
-  }
+// function calculate(expression: string): number {
+//     return eval(expression);
+//   }
   
-  console.log(calculate("1+3")); // 4
+//   console.log(calculate("1+3")); // 4
+
+// S-TASK:
+
+// Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin
+// MASALAN: missingNumber([3, 0, 1]) return 2
+
+
+function missingNumber(nums: number[]): number {
+    const n = nums.length;
+    const expectedSum = (n * (n + 1)) / 2;
+    const actualSum = nums.reduce((acc, curr) => acc + curr, 0);
+    
+    return expectedSum - actualSum;
+}
+
+// 
+console.log(missingNumber([3, 0, 1])); 
