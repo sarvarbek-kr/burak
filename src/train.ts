@@ -316,20 +316,47 @@ REQUESTLAR :
 // Shunday function yozing, uni string parametri bolsin va stringdagi harf va u harf necha marta takrorlangani sonidan tashkil topgan object qaytarsin.
 // MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
 
-function countChars(str: string): { [key: string]: number } {
-  const result: { [key: string]: number } = {};
+// function countChars(str: string): { [key: string]: number } {
+//   const result: { [key: string]: number } = {};
   
-  for (const char of str) {
-      if (result[char]) {
-          result[char]++;
-      } else {
-          result[char] = 1;
-      }
-  }
+//   for (const char of str) {
+//       if (result[char]) {
+//           result[char]++;
+//       } else {
+//           result[char] = 1;
+//       }
+//   }
   
-  return result;
+//   return result;
+// }
+
+// // Misol:
+// console.log(countChars("howareyou"));
+
+
+// W-TASK:
+
+// Shunday function yozing, uni array va number parametrlari bolsin. Function arrayni numberda berilgan uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin
+// MASALAN: chunkArray([1,2,3,4,5,6,7,8,9,10], 3) return [[1,2,3], [4,5,6], [7,8,9], [10]]. typescriptda javob ber
+
+
+
+// //////////
+function chunkArray<T>(array: T[], chunkSize: number): T[][] {
+    const result: T[][] = [];
+    
+    for (let i = 0; i < array.length; i += chunkSize) {
+        result.push(array.slice(i, i + chunkSize));
+    }
+    
+    return result;
 }
 
 // Misol:
-console.log(countChars("howareyou"));
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const chunkSize = 3;
+
+console.log(chunkArray(array, chunkSize));
+// Natija: [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
+
 
