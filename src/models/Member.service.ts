@@ -78,6 +78,21 @@ class MemberService {
    return result;
   }
 
+// definition
+  public async getTopUsers(): Promise<Member[]> {
+    const result = await this.memberModel
+    .find({
+      memberStatus: MemberStatus.ACTIVE, 
+      memberPoints: { $gte: 1},
+    }) // this dan shu yergacha query
+    //sortlar query kamandalari
+    .sort({ memberPoint: -1 })
+    .limit(4)
+    .exec();
+    if(result.length === 0) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+
+    return result;
+  }
 
      /*  SSR  */
 

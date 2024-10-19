@@ -51,4 +51,4 @@ app.set("view engine", "ejs");
 app.use("/admin", routerAdmin); // SSR: EJS (backenda frontentimzi qurishga)
 app.use("/", router);  // SPA : REACT (frontend)        // Middleware Design pattern
 
-export default app;   // module.exports bilan bir xil
+export default app;  
