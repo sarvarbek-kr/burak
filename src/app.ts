@@ -20,14 +20,14 @@ const store = new MongoDBStore({
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use("/uploads", express.static("./uploads"));
-app.use(express.urlencoded({extended: true}));
-app.use(express.json());
+app.use(express.urlencoded({extended: true}));  // form datani kirishiga ruhsat beradi
+app.use(express.json());// rest api larga ruhasat beradi   javascript objectga otkazainberadi
 app.use(cookieParser());
-app.use(morgan(MORGAN_FORMAT));
+app.use(morgan(MORGAN_FORMAT));  //req responsimiz haqida consoleda malumot beradi.
 
 // 2- SESSIONS
 app.use(
-    session({
+    session({   // 39qatorgacha sesion middlewearni yasaybmiz.
         secret: String(process.env.SESSION_SECRET),
   cookie: {
     maxAge: 1000 * 3600 * 6, // 6 hours

@@ -18,7 +18,7 @@ memberController.getRestaurant = async (req: Request, res: Response) => {
     console.log('getRestaurant');
     const result = await memberService.getRestaurant();
 
-    res.status(HttpCode.OK).json(result);
+    res.status(HttpCode.OK).json(result);  //data base dan kelgan malumotni  clientga qaytarvoryabmiz
 }   catch (err) {
     console.log('Error, getRestaurant:', err);
     if (err instanceof Errors) res.status(err.code).json(err);
