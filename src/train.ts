@@ -374,20 +374,41 @@ Yuqoridagi misolda, birinchi argument object, ikkinchi argument 'model'.
 Funktsiya, shu ikkinchi argument 'model', birinchi argument object
 tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda */
 
-let count = 0;
-function countOccurrences(obj: any,  str: string) {
-    const arr = Object.keys(obj);
-    const newArr = arr.map((ele) => {  
-        if (ele === str) count++;   
-        if (typeof obj[ele] === "object")countOccurrences(obj[ele], str);
-        else return;
-    });
+// let count = 0;
+// function countOccurrences(obj: any,  str: string) {
+//     const arr = Object.keys(obj);
+//     const newArr = arr.map((ele) => {  
+//         if (ele === str) count++;   
+//         if (typeof obj[ele] === "object")countOccurrences(obj[ele], str);
+//         else return;
+//     });
 
-return count;
-}
+// return count;
+// }
 
-console.log(
-    countOccurrences(
-        {model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model'
-    )
-);
+// console.log(
+//     countOccurrences(
+//         {model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model'
+//     )
+// );
+
+
+
+// Y-TASK:
+
+// Shunday function yozing, uni 2 ta array parapetri bolsin. Function ikkala arrayda ham ishtirok etgan qiymatlarni bir arrayda qaytarsin
+// MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
+
+
+function findIntersection(arr1: number[], arr2: number[]): number[] {
+    // Set orqali ikkala arrayda mavjud bo'lgan qiymatlarni topamiz
+    const set1 = new Set(arr1);
+    const set2 = new Set(arr2);
+  
+    
+    return [...set1].filter(value => set2.has(value));
+  }
+  
+  // Misol
+  const result = findIntersection([1, 2, 3], [3, 2, 0]);
+  console.log(result);
