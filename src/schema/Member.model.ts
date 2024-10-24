@@ -47,7 +47,7 @@ const memberSchema = new Schema({
         default:0,
     },
 }, 
-{timestamps: true} // qachon updatedAT, createdAd boganini aniqlaydi timesstamps
+{ timestamps: true } // qachon updatedAT, createdAd boganini aniqlaydi timesstamps
 );
 
 export default mongoose.model("Member", memberSchema);
